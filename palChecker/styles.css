@@ -1,0 +1,58 @@
+body {
+    display: flex;
+    justify-content: center;   /* Horizontally center */
+    align-items: center;       /* Vertically center */
+    height: 100vh;             /* Full viewport height */
+    margin: 0;                 /* Remove default body margin */
+    font-family: Arial, sans-serif;
+    background-color: #464646;
+}
+
+h1 {
+    font-size: 100px;
+    font-family: 'Ultra', sans-serif;   
+    margin-bottom: -10px;
+    color: #04AA6D;
+    font-weight: 1000;
+    text-shadow: 2px 2px 2px black;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;    /* Stack elements vertically */
+    align-items: center;       /* Center elements horizontally */
+}
+
+input[type="text"] {
+    width: 800px;     /* Increase width */
+    height: 50px;     /* Set height */
+    padding: 10px;    /* Adjust padding for more space inside */
+    font-size: 30px;  /* Increase font size for better readability */
+    margin: 5px 0;   /* Keep space between elements */
+    border-radius: 20px;
+}
+
+button {
+    padding: 15px 25px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #04AA6D;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    margin: 10px 0;           /* Space between elements */
+    padding: 10px;            /* Padding inside input and button */
+    font-size: 16px;          /* Font size for better readability */
+    width: 200px;             /* Width for the input and button */
+}
+  
+button:hover {background-color: #3e8e41}
+  
+button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
