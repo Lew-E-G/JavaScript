@@ -1,19 +1,32 @@
 const input = document.getElementById("input")
-//find out how to remove space and punctuation 
+// Grabs the input element with the id "input" from the DOM
+
+// Function to reverse the string and clean it by removing spaces and punctuation
 function reverseString(str) {
+    // Remove all non-alphanumeric characters and convert to lowercase
     const cleanedStr = str.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
-    return cleanedStr.split("").reverse().join("")
+    
+    // Split the cleaned string into an array, reverse the array, and join it back into a string
+    return cleanedStr.split("").reverse().join("");
 }
 
+// Function to check if the input value is a palindrome
 function check() {
+    // Get the input value, remove non-alphanumeric characters, and convert to lowercase
     const value = input.value.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
-    const reverse = reverseString(value)
     
+    // Reverse the cleaned input value
+    const reverse = reverseString(value);
+    
+    // Compare the cleaned input value with its reversed version
     if (value === reverse) {
-        alert("This is a Palindrome")
+        // If they match, it is a palindrome
+        alert("This is a Palindrome");
     } else {
-        alert("Unfortunately it isnt")
+        // If they don't match, it is not a palindrome
+        alert("Unfortunately it isnt");
     }
 
-    input.value = ""
+    // Clear the input field after the check
+    input.value = "";
 }
