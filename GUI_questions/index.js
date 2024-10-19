@@ -7,11 +7,17 @@ fetch('questions.json')
     .then(response => response.json())
     .then(data => {
         quizQuestions = data.questions;  // Store the questions
-        displayQuestion();               // Display the first question
     })
     .catch(error => {
         console.error('Error fetching the JSON file:', error);
     });
+
+// Show the quiz and hide the welcome section when "Start Quiz" is clicked
+document.getElementById("start-btn").addEventListener("click", function() {
+    document.getElementById("welcome-section").style.display = "none";  // Hide the welcome section
+    document.getElementById("quiz-section").style.display = "block";    // Show the quiz section
+    displayQuestion();  // Display the first question
+});
 
 // Function to display a question and its options
 function displayQuestion() {
@@ -20,20 +26,6 @@ function displayQuestion() {
 
     const question = quizQuestions[currentQuestion];
     
-    // Get the quiz container and remove any existing h3 element
-    const quizContainer = document.querySelector(".quiz-container");
-    const existingH3 = quizContainer.querySelector("h3");
-    if (existingH3) {
-        existingH3.remove();  // Remove the h3 element if it already exists
-    }
-    
-    // Create the h3 element and set its text
-    const h3Element = document.createElement("h3");
-    h3Element.textContent = "So if you're so smart, tell me...";
-
-    // Insert the h3 element before the question text
-    quizContainer.insertBefore(h3Element, questionElement);
-
     // Update question text
     questionElement.textContent = question.question;
     
@@ -48,9 +40,9 @@ function displayQuestion() {
         choiceButton.onclick = () => checkAnswer(option); // Pass the option to checkAnswer
         choicesElement.appendChild(choiceButton);
     });
+
+    document.getElementById("submit").style.display = "block"; // Show the submit button
 }
-
-
 
 // Function to check if the selected answer is correct
 function checkAnswer(selectedAnswer) {
@@ -59,7 +51,6 @@ function checkAnswer(selectedAnswer) {
     // Check if the selected answer matches the correct answer
     if (selectedAnswer === question.answer) {
         score++;
-    } else {
     }
 
     // Move to the next question
@@ -78,12 +69,6 @@ function endQuiz() {
     const questionElement = document.getElementById("question");
     const choicesElement = document.getElementById("choices");
 
-    const quizContainer = document.querySelector(".quiz-container");
-    const existingH3 = quizContainer.querySelector("h3");
-    if (existingH3) {
-        existingH3.remove();  // Remove the h3 element if it already exists
-    }
-    
     // Display final score and hide the choices
     questionElement.textContent = `Quiz complete! Your score: ${score}/${quizQuestions.length}`;
     choicesElement.innerHTML = "";
