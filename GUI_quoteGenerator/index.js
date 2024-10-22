@@ -46,6 +46,11 @@ function generateQuote() {
         // Find the DOM element with the id 'quote' and set its innerHTML to the selected quote
         const quoteElement = document.getElementById("quote");
         quoteElement.innerHTML = quote;
+
+        // Reset the animation by removing and re-adding the class
+        quoteElement.classList.remove("typewriter");
+        void quoteElement.offsetWidth; // Trigger a DOM reflow, allowing the animation to reset
+        quoteElement.classList.add("typewriter");
         
         // Add the used index to the set so it's not used again
         usedIndexes.add(randomIdx)
