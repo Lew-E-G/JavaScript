@@ -23,13 +23,15 @@ function timer() {
 // Starts the timer and sets an interval to call the `timer` function every second
 // TODO: Add the intervals functionality to the start button
 function startClock() {
-    if (interval) {return};  // If a timer is already running, stop it before starting a new one
-    interval = setInterval(timer, 1000);  // Set an interval to run the `timer` function every second
+    if (!interval) {  // If a timer is already running, stop it before starting a new one
+    interval = setInterval(timer, 1000);
+    }  // Set an interval to run the `timer` function every second
 }
 
 // Stops the running timer by clearing the interval
 function stopClock() {
     clearInterval(interval);  // Stop the interval timer
+    interval = null
 }
 
 // Resets the timer by stopping it, resetting the elapsed time to zero, and updating the display
