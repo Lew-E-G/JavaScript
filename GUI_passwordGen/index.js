@@ -1,8 +1,7 @@
 // Selecting the input box where the password will be displayed
 const passwordBox = document.getElementById("password");
 
-// Setting the desired length of the password
-const length = 12;
+const lengthSelect = document.getElementById("pw-length"); // Get the dropdown element
 
 // Defining character pools for the password
 const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; // Uppercase letters
@@ -15,6 +14,8 @@ const allChar = upperCase + lowerCase + number + symbol;
 
 // Function to create a password
 function createPassword(){
+    const length = parseInt(lengthSelect.value); // Get the selected length from the dropdown
+
     let password = "";
 
     // Ensuring at least one character from each pool is included

@@ -9,6 +9,17 @@
 <body>
 <div class="container">
     <h1>Generate a <br><span>Random Password</span></h1>
+    <br>
+    <div>
+        <label for="pw-length">Password Length:</label>
+        <select id="pw-length">
+            <option value="8">8</option>
+            <option value="10">10</option>
+            <option value="12" selected>12</option>
+            <option value="16">16</option>
+            <option value="24">24</option>
+        </select>
+    </div>
     <div class="display">
         <input type="text" id="password" placeholder="Password">
         <img onclick="copyPassword()" src="images/copy.png">

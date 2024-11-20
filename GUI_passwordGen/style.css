@@ -18,8 +18,8 @@ body {
 
 .display {
     width: 100%;
-    margin-top: 50px;
-    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     background: #fff;
     color: #333;
     display: flex;
@@ -71,6 +71,18 @@ body {
     cursor: pointer;
 }
 
+.container label {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 300;
+}
+
+.container select {
+    font-size: 20px;
+    font-weight: 300;
+    border: 0;
+}
+
 #copy-notification {
     position: fixed;
     bottom: 20px;
@@ -88,3 +100,4 @@ body {
 #copy-notification.show {
     opacity: 1;
 }
+
