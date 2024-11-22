@@ -53,7 +53,7 @@ To run these projects, you’ll need:
 	```bash
    cd JavaScript
 3. **Open the HTML file:**
-    Navigate to the respective project folder and open the .html file in your browser.  
+    Navigate to the respective project folder and open the `.html` file in your browser.  
 4. **Run the app:**
     The app will execute automatically in the browser.
 
