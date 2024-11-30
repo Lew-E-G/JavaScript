@@ -204,6 +204,14 @@ Here are descriptions of the key GUI projects included in this collection:
   - State management: Tracks the user's progress and calculates the score.
   - Event handling: Handles question navigation and answer selection.
 
+---
+
+### 10. **Speech 2 Text**
+- **Description**: A text to voice converter that allows users to input text and have it spoke back.
+- **Concepts**:
+  - DOM manipulation: User experience by altering UI elements in response to user actions and speech synthesis events.
+  - Utilized the SpeechSynthesis API to convert text input into speech.
+  - API Intergration: Utilized the SpeechSynthesis API to convert text input into speech.
 
 ## Contributing
 If you'd like to contribute to this repository, feel free!
