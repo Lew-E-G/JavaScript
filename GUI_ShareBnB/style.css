@@ -114,7 +114,21 @@ nav{
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
-.exclusives div{
+.exclusives div img{
     width: 100%;
     border-radius: 10px;
+}
+
+.exclusives div{
+    position: relative;
+}
+
+.exclusives div span{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    
 }
